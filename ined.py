@@ -28,7 +28,7 @@ def extrair_url_duckduckgo(link):
     return original
 
 def buscar(url, engine, max_res):
-    print(f"\n[+] Buscando em: {url}\nEngine: {engine}")
+    print(f"\n[+] buscando em: {url}\nEngine: {engine}")
     try:
         r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=5)
         r.raise_for_status()
@@ -85,12 +85,12 @@ def executar_busca(q, site, advanced, num=5):
 
 def main():
     while True:
-        q = input("Consulta: ")
-        site = input("Site (opcional): ")
-        advanced = input("Operador avançado (intitle, inurl, intext, etc. ou vazio): ")
-        num = int(input("Número de resultados (padrão=5): ") or 5)
+        q = input("consulta:-$ ")
+        site = input("site (opcional):-$ ")
+        advanced = input("operador avançado (intitle, inurl, intext, etc. ou vazio):-$ ")
+        num = int(input("número de resultados (padrão=5):-$ ") or 5)
         executar_busca(q, site, advanced, num)
-        if input("Nova consulta? (s/n): ").lower() != 's':
+        if input("nova consulta? (s/n): ").lower() != 's':
             break
 
 if __name__ == "__main__":
