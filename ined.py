@@ -1,3 +1,6 @@
+# This code is not mine. Im just hosting this.
+# Code writter: ct4eiros> ayo.so/m2hcz
+
 import requests
 from bs4 import BeautifulSoup
 import concurrent.futures
